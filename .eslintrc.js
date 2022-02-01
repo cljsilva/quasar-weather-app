@@ -18,6 +18,7 @@ module.exports = {
   extends: [
     // Base ESLint recommended rules
     // 'eslint:recommended',
+    "plugin:prettier/recommended",
 
 
     // Uncomment any of the lines below to choose desired strictness,
@@ -35,6 +36,7 @@ module.exports = {
     // https://eslint.vuejs.org/user-guide/#why-doesn-t-it-work-on-vue-file
     // required to lint *.vue files
     'vue',
+    'prettier'
 
   ],
 
@@ -70,7 +72,7 @@ module.exports = {
     'import/no-unresolved': 'off',
     'import/no-extraneous-dependencies': 'off',
     'prefer-promise-reject-errors': 'off',
-
+    'prettier/prettier': "error",
 
     // allow debugger during development only
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
